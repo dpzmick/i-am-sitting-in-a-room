@@ -1,7 +1,9 @@
 set -x
 set -e
 
-in="/nas/data/music/mad-rush-sally-whitwell/01 - Glass, P - Glassworks - 1. Opening.flac"
+#in="/nas/data/music/mad-rush-sally-whitwell/01 - Glass, P - Glassworks - 1. Opening.flac"
+#in="/nas/scratch/jetpacks_was_yes.wav"
+in="/nas/scratch/the_walk.wav"
 loops=50
 
 for i in $(seq 1 $loops)

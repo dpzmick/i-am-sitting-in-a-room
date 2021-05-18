@@ -113,7 +113,7 @@ load_input( char const * fname,
   *out_sample_count = frames;
   printf( "Loaded %zu samples (%zu sample rate)\n", *out_sample_count, *out_sample_rate );
 
-  *out_sample_count = 4096*256;
+  *out_sample_count = 4096*1024;
 
   return ret;
 }
