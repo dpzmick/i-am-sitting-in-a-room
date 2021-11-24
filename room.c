@@ -76,10 +76,12 @@ app_process( jack_nframes_t nframes, void * _app )
   if( app->running ) {
     nframes = MIN( nframes, (jack_nframes_t)(app->n_samples-app->where) );
     for( size_t i = 0; i < nframes; ++i ) {
-      app->output_samples[ app->where ] = in1[i] * 1.059f;
+      // app->output_samples[ app->where ] = in1[i] * 1.059f;
+      app->output_samples[ app->where ] = in1[i];
       out1[i] = app->input_samples[ app->where++ ];
 
-      app->output_samples[ app->where ] = in2[i] * 1.057f;
+      // app->output_samples[ app->where ] = in2[i] * 1.057f;
+      app->output_samples[ app->where ] = in2[i];
       out2[i] = app->input_samples[ app->where++ ];
     }
   }

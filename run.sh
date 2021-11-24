@@ -4,17 +4,17 @@ set -e
 #in="/nas/data/music/mad-rush-sally-whitwell/01 - Glass, P - Glassworks - 1. Opening.flac"
 #in="/nas/scratch/jetpacks_was_yes.wav"
 in="/nas/scratch/the_walk.wav"
-loops=50
+loops=1024
 
 for i in $(seq 1 $loops)
 do
-    inpt="out_$((i - 1)).wav"
+    inpt="/nas/scratch/out_$((i - 1)).wav"
     if [ $i -eq 1 ]
     then
         inpt=$in
     fi
 
-    ./room "$inpt" "out_$i.wav"&
+    ./room "$inpt" "/nas/scratch/out_$i.wav"&
 
     sleep 2
 
